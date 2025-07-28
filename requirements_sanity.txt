@@ -1,0 +1,20 @@
+# CUDA 11.8 wheels for PyTorch
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+# ── Core ────────────────────────────────────────────────────────────────────────
+torch                   # GPU builds pulled from the extra‑index above
+transformers            # HF model/ tokenizer wrapper
+datasets                # HF datasets – notebook calls load_dataset
+nnsight>=0.3.5          # model‑introspection used in the notebook
+
+# ── Helpers ─────────────────────────────────────────────────────────────────────
+accelerate              # device placement, 4‑bit loading, etc.
+bitsandbytes            # 8‑/4‑bit quantisation backend
+einops                  # tensor reshaping utilities
+scikit-learn            # metrics & clustering
+tqdm                    # progress bars
+numpy                   # numeric workhorse
+huggingface_hub
+
+# ── Jupyter (comment out if you run headless) ──────────────────────────────────
+ipykernel
