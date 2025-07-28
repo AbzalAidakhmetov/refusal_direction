@@ -1,10 +1,14 @@
 # Refusal in Language Models Is Mediated by a Single Direction
 
-- run `setup_sanity.sh`
+
+```bash
+git clone https://github.com/AbzalAidakhmetov/refusal_direction.git
+cd refusal_direction
+source setup_sanity.sh
+```
 - go to `sanity.ipynb`
 
-
-~~**Content warning**: This repository contains text that is offensive, harmful, or otherwise inappropriate in nature.
+<!-- **Content warning**: This repository contains text that is offensive, harmful, or otherwise inappropriate in nature.
 
 This repository contains code and results accompanying the paper "Refusal in Language Models Is Mediated by a Single Direction".
 In the spirit of scientific reproducibility, we provide code to reproduce the main results from the paper.
@@ -78,4 +82,4 @@ If you find this work useful in your research, please consider citing our [paper
   journal={arXiv preprint arXiv:2406.11717},
   year={2024}
 }
-```~~
+``` -->
