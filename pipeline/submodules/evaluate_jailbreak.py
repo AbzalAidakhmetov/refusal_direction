@@ -5,10 +5,10 @@ import gc
 import numpy as np
 
 from transformers import AutoTokenizer
-from vllm import LLM, SamplingParams
-from vllm.distributed.parallel_state import destroy_model_parallel
+# from vllm import LLM, SamplingParams
+# from vllm.distributed.parallel_state import destroy_model_parallel
 import torch
-import litellm
+# import litellm
 import time
 
 # based on https://github.com/JailbreakBench/jailbreakbench/blob/4dbcc097739dd684fbf789cc3d4f97372bd72851/src/jailbreakbench/classifier.py
@@ -188,7 +188,8 @@ def evaluate_jailbreak(
     """
 
     if completions_path is not None:
-        completions = json.load(open(completions_path), 'r')
+        with open(completions_path, 'r') as f:
+            completions = json.load(f)
         assert isinstance(completions, list), "completions_path must point to a list of completions."
     else:
         assert completions is not None, "Either completions_path or completions must be provided."
